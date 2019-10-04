@@ -11,7 +11,7 @@ predictCVD(gender, age, Tchol, HDLchol, SBP, DBP, diabetes, smoker,
   ECG_LVH, t)
 }
 \arguments{
-\item{gender}{A binary variable taking 1 if patient is female and 0 if male}
+\item{gender}{A binary variable taking 1 if a patient is female and 0 if male}
 
 \item{age}{A number for age}
 

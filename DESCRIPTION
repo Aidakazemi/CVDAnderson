@@ -7,7 +7,7 @@ Authors@R: c(
        person("Amin", "Adibi", email = "adibi@alumni.ubc.ca", role = c("aut", "cre")))
 Maintainer: Amin Adibi <adibi@alumni.ubc.ca>
 Description: Predicts chance of developing Cardiovascular Disease (CVD) risk.The prediction based on SBP is recommended because the log likelihoods are slightly higher. The differences in otucome are not significant whencomapring SBP estimation compared to DBP except for Stroke and to some extend CVD (which includes stroke) Definitions of risk factors and outcomes are based on Framingham study standard. Time interval of 4 to 12 years are recommended.
-License: WGPL-3
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
