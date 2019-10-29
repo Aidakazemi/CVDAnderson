@@ -20,7 +20,7 @@ devtools::install_github("resplab/CVDAnderson")
 
 # Web App for CVDAnderson 
 
-CHDWilson is also available as web app, accessible at [http://resp.core.ubc.ca/ipress/CVDAnderson](http://resp.core.ubc.ca/ipress/CVDAnderson)
+CVDAnderson is also available as web app, accessible at [http://resp.core.ubc.ca/ipress/CVDAnderson](http://resp.core.ubc.ca/ipress/CVDAnderson)
 
 # Cardiovascular Disease (CVD) Prediction Model
 
