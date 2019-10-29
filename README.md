@@ -18,7 +18,7 @@ install.packages("devtools")
 devtools::install_github("resplab/CVDAnderson")
 ```
 
-# Web App for CHDWilson 
+# Web App for CVDAnderson 
 
 CHDWilson is also available as web app, accessible at [http://resp.core.ubc.ca/ipress/CVDAnderson](http://resp.core.ubc.ca/ipress/CVDAnderson)
 
