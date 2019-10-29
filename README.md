@@ -30,7 +30,7 @@ To get a prediction for Cardiovascular Disease (CVD), you will need to pass in p
 predictCVD (gender = 1, age = 33, Tchol = 230, HDLchol = 48, SBP = 135, DBP = 88, diabetes = 1, smoker = 1, ECG_LVH = 0, t = 10)
 ```
 
-The ***predictCVD()*** function returns the risk Cardiovascular Disease (CVD) sing Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP).
+The ***predictCVD()*** function returns the risk Cardiovascular Disease (CVD) using Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP).
 The prediction based on SBP is recommended in the reference paper because the log likelihoods are slightly higher. The differences in otucome are not significant when comapring SBP estimation compared to DBP except for Stroke and to some extend CVD (which includes stroke). Definitions of risk factors and outcomes are based on Framingham study standard. Time interval of 4 to 12 years are recommended.
 
 ## Cloud-based API Access
