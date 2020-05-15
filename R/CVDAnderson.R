@@ -142,7 +142,7 @@ predictcvd <- function (gender, age, Tchol, HDLchol, SBP, DBP, diabetes, smoker,
   u_CVDdeath_d <- (log(t) - m_CVDdeath_d) / sigma_CVDdeath_d
 
 
-  p_CHD_d <- round (1 - exp(-exp(u_CHD_d)), digit = 2)
+  p_CHD_d <- round (1 - exp(-exp(u_CHD_d)), digits = 2)
 
   p_MI_d <- round (1 - exp(-exp(u_MI_d)), digits =2)
 
