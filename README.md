@@ -16,7 +16,7 @@ You can download the latest development version from GitHub:
 
 ```
 install.packages("remotes")
-remotes::install_github("resplab/CVDAnderson")
+remotes::install_github("resplab/cvdanderson")
 ```
 
 
