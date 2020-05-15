@@ -13,7 +13,6 @@
 #'
 #' @example
 #' predictcvd (gender = 1, age = 33, Tchol = 230, HDLchol = 48, SBP = 135, DBP = 88, diabetes = 1, smoker = 1, ECG_LVH = 0, t = 10)
-#'
 #' @source  \url{https://www.ahajournals.org/doi/pdf/10.1161/01.CIR.83.1.356} and \url{https://www.sciencedirect.com/science/article/pii/000287039190861B}
 #' @export
 predictcvd <- function (gender, age, Tchol, HDLchol, SBP, DBP, diabetes, smoker, ECG_LVH, t) {

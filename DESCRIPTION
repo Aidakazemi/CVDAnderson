@@ -1,4 +1,4 @@
-Package: CVDAnderson
+Package: cvdanderson
 Type: Package
 Title: Cardiovascular Disease Risk Prediction Models based on <doi: 10.1016/0002-8703(91)90861-b>
 Version: 0.1.0
