@@ -85,6 +85,17 @@ remotes::install_github("resplab/cvdanderson")</code></pre>
 <h3 class="hasAnchor">
 <a href="#cloud-based-api-access" class="anchor"></a>Cloud-based API Access</h3>
 <p>The <a href="http://prism.resp.core.ubc.ca">PRISM platform</a> allows users to access CVDAnderson through the cloud. A MACRO-enabled Excel-file can be used to interact with the model and see the results. To download the PRISM Excel template file for CVDAnderson please refer to the <a href="http://resp.core.ubc.ca/ipress/prism">PRISM model repository</a>.</p>
+<div id="linux" class="section level4">
+<h4 class="hasAnchor">
+<a href="#linux" class="anchor"></a>Linux</h4>
+<p>In Ubuntu, you can call the API with <code>curl</code>:</p>
+<pre><code>curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"age": 33,"gender": 1,"Tchol": 230,"ECG_LVH": 0,"HDLchol": 48, "SBP": 135, "DBP": 88, "diabetes": 1, "smoker": 1, "t": 10}]}' \
+https://admin-prism-api.cp.prism-ubc.linaralabs.com/route/cvdanderson/run</code></pre>
+</div>
 </div>
 <div id="citation" class="section level3">
 <h3 class="hasAnchor">
