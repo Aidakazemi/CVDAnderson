@@ -25,6 +25,7 @@ remotes::install_github("resplab/cvdanderson")
 To get a prediction for Cardiovascular Disease (CVD), you will need to pass in patient's risk factors. For example: 
 
 ```
+library(cvdanderson)
 predictcvd (gender = 1, age = 33, Tchol = 230, HDLchol = 48, SBP = 135, DBP = 88, diabetes = 1, smoker = 1, ECG_LVH = 0, t = 10)
 ```
 
