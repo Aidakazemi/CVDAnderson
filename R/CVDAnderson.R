@@ -7,9 +7,10 @@
 #' @param SBP A number fo systolic blood pressure in mm Hg
 #' @param DBP A number for diastolic blood pressure in mm Hg
 #' @param diabetes A binary variable taking 1 if the patient was under treatment with insulin or oral hypoglycemic agents, if casual blood glucose determinations exceeded 140 mg/dL
-#' @param smoker A binary variable taking 1 for person who smoked during the past 12 month and 0 therwise
+#' @param smoker A binary variable taking 1 for person who smoked during the past 12 month and 0therwise
 #' @param ECG_LVH A binary variable taking 1 for patients diagnosed with ECG-left ventricular hypertrophy and 0 otherwise (If there is no information, it is 0)
 #' @param t A number for time until CVD from the beginning of follow-up
+#' @value returns risk of cardiovascular events based on either systolic or diastolic blood pressure
 #'
 #' @example
 #' predictcvd (gender = 1, age = 33, Tchol = 230, HDLchol = 48, SBP = 135, DBP = 88, diabetes = 1, smoker = 1, ECG_LVH = 0, t = 10)
@@ -159,23 +160,23 @@ predictcvd <- function (gender, age, Tchol, HDLchol, SBP, DBP, diabetes, smoker,
 
   if (age > 29 & age < 75) {
 
+ results <- list("CHD_risk_systolicBase"      = p_CHD_s,
+                 "MI_risk_systolicBase"       = p_CHD_s,
+                 "CHDdeath_risk_systolicBase" = p_CHDdeath_s,
+                 "stroke_risk_systolicBase"   = p_stroke_s,
+                 "CVD_risk_systolicBase"      = p_CVD_s,
+                 "CVDdeath_risk_systolicBase" = p_CVDdeath_s,
+                 "CHD_risk_diastolicBase"      = p_CHD_d,
+                 "MI_risk_diastolicBase"       = p_CHD_d,
+                 "CHDdeath_risk_diastolicBase" = p_CHDdeath_d,
+                 "stroke_risk_diastolicBase"   = p_stroke_d,
+                 "CVD_risk_diastolicBase"      = p_CVD_d,
+                 "CVDdeath_risk_diastolicBase" = p_CVDdeath_d)
 
-  risk_Outcome <- list("CHD_risk","MI_risk", "CHDdeath_risk", "stroke_risk", "CVD_risk", "CVDdeath_risk")
-
-  systolicbase_risk <- list (p_CHD_s, p_MI_s, p_CHDdeath_s, p_stroke_s, p_CVD_s, p_CVDdeath_s)
-
-  diastolicbase_risk <- list (p_CHD_d, p_MI_d, p_CHDdeath_d, p_stroke_d, p_CVD_d, p_CVDdeath_d)
-
-
-
-  return(as.list(cbind(risk_Outcome,systolicbase_risk,diastolicbase_risk)))
-
-
-
+  return(as.list(results))
 
   } else {
-    results$prediction <- 'Not_in_age_range'
-    return (results)
+    stop("Age out of range. Age should be between 29 and 75")
   }
 
 

@@ -24,7 +24,7 @@ predictcvd(gender, age, Tchol, HDLchol, SBP, DBP, diabetes, smoker, ECG_LVH, t)
 
 \item{diabetes}{A binary variable taking 1 if the patient was under treatment with insulin or oral hypoglycemic agents, if casual blood glucose determinations exceeded 140 mg/dL}
 
-\item{smoker}{A binary variable taking 1 for person who smoked during the past 12 month and 0 therwise}
+\item{smoker}{A binary variable taking 1 for person who smoked during the past 12 month and 0therwise}
 
 \item{ECG_LVH}{A binary variable taking 1 for patients diagnosed with ECG-left ventricular hypertrophy and 0 otherwise (If there is no information, it is 0)}
 
