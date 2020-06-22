@@ -45,7 +45,7 @@ curl \
 -H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
 -H "Content-Type: application/json" \
 -d '{"func":["prism_model_run"],"model_input":[{"age": 33,"gender": 1,"Tchol": 230,"ECG_LVH": 0,"HDLchol": 48, "SBP": 135, "DBP": 88, "diabetes": 1, "smoker": 1, "t": 10}]}' \
-https://admin-prism-api.cp.prism-ubc.linaralabs.com/route/cvdanderson/run
+https://prism.peermodelsnetwork.com/route/cvdanderson/run
 ```
 
 
