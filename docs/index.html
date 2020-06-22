@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">cvdanderson</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -78,13 +78,14 @@ remotes::install_github("resplab/cvdanderson")</code></pre>
 <h3 class="hasAnchor">
 <a href="#cardiovascular-disease-cvd-prediction" class="anchor"></a>Cardiovascular Disease (CVD) Prediction</h3>
 <p>To get a prediction for Cardiovascular Disease (CVD), you will need to pass in patient’s risk factors. For example:</p>
-<pre><code><a href="reference/predictcvd.html">predictcvd (gender = 1, age = 33, Tchol = 230, HDLchol = 48, SBP = 135, DBP = 88, diabetes = 1, smoker = 1, ECG_LVH = 0, t = 10)</a></code></pre>
+<pre><code>library(cvdanderson)
+predictcvd (gender = 1, age = 33, Tchol = 230, HDLchol = 48, SBP = 135, DBP = 88, diabetes = 1, smoker = 1, ECG_LVH = 0, t = 10)</code></pre>
 <p>The <strong><em>predictcvd()</em></strong> function returns the risk Cardiovascular Disease (CVD) using Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP). The prediction based on SBP is recommended in the reference paper because the log likelihoods are slightly higher. The differences in otucome are not significant when comapring SBP estimation compared to DBP except for Stroke and to some extend CVD (which includes stroke). Definitions of risk factors and outcomes are based on Framingham study standard. Time interval of 4 to 12 years are recommended.</p>
 </div>
 <div id="cloud-based-api-access" class="section level3">
 <h3 class="hasAnchor">
 <a href="#cloud-based-api-access" class="anchor"></a>Cloud-based API Access</h3>
-<p>The <a href="http://prism.resp.core.ubc.ca">PRISM platform</a> allows users to access CVDAnderson through the cloud. A MACRO-enabled Excel-file can be used to interact with the model and see the results. To download the PRISM Excel template file for CVDAnderson please refer to the <a href="http://resp.core.ubc.ca/ipress/prism">PRISM model repository</a>.</p>
+<p>The <a href="http://www.peermodelsnetwork.com">Peer Models Network PRISM platform</a> allows users to access CVDAnderson through the cloud. A MACRO-enabled Excel-file can be used to interact with the model and see the results. To download the PRISM Excel template file for CVDAnderson please refer to the <a href="https:/models.peermodelsnetwork.com">PRISM model repository</a>.</p>
 <div id="linux" class="section level4">
 <h4 class="hasAnchor">
 <a href="#linux" class="anchor"></a>Linux</h4>
@@ -94,7 +95,7 @@ remotes::install_github("resplab/cvdanderson")</code></pre>
 -H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
 -H "Content-Type: application/json" \
 -d '{"func":["prism_model_run"],"model_input":[{"age": 33,"gender": 1,"Tchol": 230,"ECG_LVH": 0,"HDLchol": 48, "SBP": 135, "DBP": 88, "diabetes": 1, "smoker": 1, "t": 10}]}' \
-https://admin-prism-api.cp.prism-ubc.linaralabs.com/route/cvdanderson/run</code></pre>
+https://prism.peermodelsnetwork.com/route/cvdanderson/run</code></pre>
 </div>
 </div>
 <div id="citation" class="section level3">
